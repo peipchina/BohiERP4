@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{847541EA-F669-41EB-8A19-A858915436A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bohi.ERP.BLL</RootNamespace>
+    <AssemblyName>Bohi.ERP.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PoundTotalManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubAutoCodeListManager.cs" />
+    <Compile Include="PubAutoCodeManager.cs" />
+    <Compile Include="PubBlackAutoCodeManager.cs" />
+    <Compile Include="PubcustomerManager.cs" />
+    <Compile Include="PubLoginManager.cs" />
+    <Compile Include="PubMaterialManager.cs" />
+    <Compile Include="PubMatShortKeyManager.cs" />
+    <Compile Include="PubRemShortKeyManager.cs" />
+    <Compile Include="PubShipShortKeyManager.cs" />
+    <Compile Include="ReachArriveManager.cs" />
+    <Compile Include="RebackCheckManager.cs" />
+    <Compile Include="SacOutSuperviseManager.cs" />
+    <Compile Include="SoybeanAutoCodeManager.cs" />
+    <Compile Include="TradeManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bohi.ERP.DAL\Bohi.ERP.DAL.csproj">
+      <Project>{c18a496e-fd61-49ec-a54b-f4c65c5595eb}</Project>
+      <Name>Bohi.ERP.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bohi.ERP.MODEL\Bohi.ERP.MODEL.csproj">
+      <Project>{fdb6786a-a5d4-46ba-80a7-889546450953}</Project>
+      <Name>Bohi.ERP.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
